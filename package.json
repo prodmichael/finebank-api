@@ -1,26 +1,27 @@
 {
-  "name": "finebank-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prodmichael/finebank-api.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/prodmichael/finebank-api/issues"
-  },
-  "homepage": "https://github.com/prodmichael/finebank-api#readme",
-  "dependencies": {
-    "express": "^4.18.2",
-    "mongodb": "^5.7.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+	"name": "finebank-api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index",
+		"server": "nodemon index"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/prodmichael/finebank-api.git"
+	},
+	"author": "prodMichael",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/prodmichael/finebank-api/issues"
+	},
+	"homepage": "https://github.com/prodmichael/finebank-api#readme",
+	"dependencies": {
+		"express": "^4.18.2",
+		"mongodb": "^5.7.0"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.1"
+	}
 }
