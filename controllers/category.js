@@ -36,7 +36,7 @@ module.exports.create = async function (req, res) {
 		name: req.body.name,
 		img: req.file ? req.file.path : '',
 		price: req.body.price,
-		// user: req.user.id,
+		user: req.user.id,
 	})
 	try {
 		await category.save()

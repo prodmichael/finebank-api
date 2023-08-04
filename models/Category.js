@@ -14,10 +14,10 @@ const categorySchema = new Schema({
 		type: Number,
 		required: true,
 	},
-	// user: {
-	// 	ref: 'users',
-	// 	type: Schema.Types.ObjectId,
-	// },
+	user: {
+		ref: 'users',
+		type: Schema.Types.ObjectId,
+	},
 })
 
 module.exports = mongoose.model('categories', categorySchema)
