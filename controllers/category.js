@@ -1,4 +1,8 @@
-module.exports.getAll = function (req, res) {}
+module.exports.getAll = function (req, res) {
+	res.json({
+		message: 'Category',
+	})
+}
 
 module.exports.getById = function (req, res) {}
 
