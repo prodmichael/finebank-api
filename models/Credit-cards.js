@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const cardSchema = new Schema({
 	img: {
 		type: String,
-		required: true,
+		required: false,
 	},
 	name: {
 		type: String,
@@ -14,6 +14,10 @@ const cardSchema = new Schema({
 		type: Number,
 		required: true,
 		unique: true,
+	},
+	amount: {
+		type: Number,
+		required: true,
 	},
 	date: {
 		type: Date,
