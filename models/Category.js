@@ -11,7 +11,7 @@ const categorySchema = new Schema({
 		default: '',
 	},
 	price: {
-		type: Number,
+		type: String,
 		required: true,
 	},
 	user: {

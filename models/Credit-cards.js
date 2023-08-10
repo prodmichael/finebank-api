@@ -11,7 +11,7 @@ const cardSchema = new Schema({
 		required: true,
 	},
 	number: {
-		type: Number,
+		type: String,
 		required: true,
 		unique: true,
 	},
@@ -19,18 +19,18 @@ const cardSchema = new Schema({
 		type: Number,
 		required: true,
 	},
-	date: {
-		type: Date,
-		required: true,
-	},
-	code: {
-		type: Number,
-		required: true,
-	},
+	// date: {
+	// 	type: Date,
+	// 	required: true,
+	// },
+	// code: {
+	// 	type: Number,
+	// 	required: true,
+	// },
 	user: {
 		ref: 'users',
 		type: Schema.Types.ObjectId,
 	},
 })
 
-module.exports = mongoose.model('cards', cardSchema)
+module.exports = mongoose.model('credit-card', cardSchema)
