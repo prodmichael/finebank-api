@@ -9,14 +9,27 @@ router.get(
 	passport.authenticate('jwt', { session: false }),
 	controller.getAll
 )
-router.get('/:id', controller.getById)
-router.delete('/:id', controller.delete)
+router.get(
+	'/',
+	passport.authenticate('jwt', { session: false }),
+	controller.getById
+)
+router.delete(
+	'/:id',
+	passport.authenticate('jwt', { session: false }),
+	controller.delete
+)
 router.post(
 	'/',
 	passport.authenticate('jwt', { session: false }),
 	upload.single('png'),
 	controller.create
 )
-router.patch('/:id', controller.update)
+router.patch(
+	'/:id',
+	passport.authenticate('jwt', { session: false }),
+	upload.single('png'),
+	controller.update
+)
 
 module.exports = router

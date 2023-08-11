@@ -14,7 +14,7 @@ module.exports.login = async function (req, res) {
 			candidate.password
 		)
 		if (passwordResult) {
-			// создание токена, защита токена, время активности
+			// создание токена, защита токена, время активности токена
 			const token = jwt.sign(
 				{
 					email: candidate.email,
