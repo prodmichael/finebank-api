@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const cardSchema = new Schema({
 	img: {
 		type: String,
-		required: false,
+		default: '',
 	},
 	name: {
 		type: String,
@@ -33,4 +33,4 @@ const cardSchema = new Schema({
 	},
 })
 
-module.exports = mongoose.model('credit-card', cardSchema)
+module.exports = mongoose.model('credit-cards', cardSchema)

@@ -11,7 +11,14 @@ module.exports.getAll = async function (req, res) {
 	}
 }
 
-module.exports.getById = async function (req, res) {}
+module.exports.getById = async function (req, res) {
+	try {
+		const creditCard = await CreditCard.findById(req.params.id)
+		res.status(200).json(creditCard)
+	} catch (e) {
+		errorHandler(res, e)
+	}
+}
 
 module.exports.delete = async function (req, res) {}
 
@@ -21,6 +28,7 @@ module.exports.create = async function (req, res) {
 		name: req.body.name,
 		number: req.body.number,
 		amount: req.body.amount,
+		user: req.user.id,
 	})
 	try {
 		await creditCard.save()
