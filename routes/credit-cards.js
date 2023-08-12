@@ -10,7 +10,7 @@ router.get(
 	controller.getAll
 )
 router.get(
-	'/',
+	'/:id',
 	passport.authenticate('jwt', { session: false }),
 	controller.getById
 )
