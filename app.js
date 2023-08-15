@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const passport = require('passport')
+const path = require('path')
 const bodyParser = require('body-parser')
 const authRoutes = require('./routes/auth')
 const analyticsRoutes = require('./routes/analytics')
@@ -29,5 +30,20 @@ app.use('/api/analytics', analyticsRoutes)
 app.use('/api/category', categoryRoutes)
 app.use('/api/credit-cards', cardsRoutes)
 app.use('/api/transactions', transactionsRoutes)
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('finebank-dashboard/dist/finebank-dashboard'))
+	app.get('*', (req, res) => {
+		res.sendFile(
+			path.resolve(
+				__dirname,
+				'finebank-dashboard',
+				'dist',
+				'finebank-dashboard',
+				'index.html'
+			)
+		)
+	})
+}
 
 module.exports = app
